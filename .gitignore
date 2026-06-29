@@ -1,0 +1,32 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local logs
+*.log
+
+# Benchmark outputs that may be large or contain raw provider payloads
+audio_benchmark/outputs/raw/
+
+# Keep generated summaries readable, but ignore temporary files
+*.tmp
+*.bak

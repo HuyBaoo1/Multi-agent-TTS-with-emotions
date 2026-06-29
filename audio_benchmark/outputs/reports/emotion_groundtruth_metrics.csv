@@ -1,0 +1,5 @@
+provider,model,ground_truth_files,exact_match_rate,any_overlap_rate,precision,recall,f1,predicted_emotion_coverage,error_rate_on_gt_files,tp,fp,fn
+gemini,gemini-3.5-flash,4,0.25,0.25,0.3333333333333333,0.25,0.28571428571428575,0.75,0.25,1,2,3
+gemini,gemini-3.1-pro-preview,4,0.0,0.25,0.25,0.25,0.25,0.75,0.25,1,3,3
+elevenlabs,scribe_v2,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4
+openai,gpt-4o-mini-transcribe,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0,0,4

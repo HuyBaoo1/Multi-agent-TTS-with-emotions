@@ -1,0 +1,2 @@
+﻿file_id,file_path,file_name,language,ground_truth_transcript,ground_truth_tagged_transcript,nonverbal_tags_json,background_tags_json,emotion_tags_json,speech_present,multiple_speakers,noise_level,annotator,review_status,notes
+H_m_nay_chia_s_nhanh_m_t_c_u_n_i_v_vi_c_h_c_c_a_B_c_H_48eebb92fb2d,audio\Audio-short\Hôm nay chia sẻ nhanh một câu nói về việc học của Bác Hồ ❤️.mp3,Hôm nay chia sẻ nhanh một câu nói về việc học của Bác Hồ ❤️.mp3,,,,[],[],[{"label": "excited"}],,,,,reviewed,

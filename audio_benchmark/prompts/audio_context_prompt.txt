@@ -1,0 +1,53 @@
+Analyze the audio file and return only valid JSON.
+
+Your task has three layers:
+
+1. Transcription:
+   - Transcribe the speech as accurately as possible.
+   - Preserve the original language.
+   - If possible, include segments and word-level timestamps.
+   - If timestamps are unavailable, return empty arrays.
+
+2. Non-verbal and background tags:
+   - Detect non-verbal human sounds such as laughter, crying, cough, sigh, scream.
+   - Detect background/audio events such as applause, music, noise, traffic, rain, phone ring, alarm.
+   - Do not invent tags.
+   - If unsure, use unknown_sound or return low confidence.
+
+3. Emotion:
+   - Detect the speaker emotion only if speech or human vocal sound is present.
+   - Use only these labels: neutral, happy, sad, angry, fearful, calm, excited, stressed, uncertain_emotion, not_applicable.
+   - If emotion is unclear, use uncertain_emotion.
+   - If there is no speech/human vocal sound, use not_applicable.
+
+Also return a tagged transcript if possible. Insert non-verbal tags into the transcript only when clearly supported by the audio. Example:
+“Tôi rất vui [laughter] khi gặp bạn.”
+
+If exact position is unknown, do not force inline placement. Instead, keep the tag in the nonverbal_tags list with time_status = "global".
+
+Return JSON with this schema:
+{
+  "transcription": {
+    "transcript": "",
+    "language": "",
+    "segments": [],
+    "words": []
+  },
+  "tagged_transcript": "",
+  "nonverbal_tags": [],
+  "noise_background_tags": [],
+  "emotion_tags": [],
+  "quality": {
+    "speech_present": true,
+    "noise_level": "low/medium/high/unknown",
+    "multiple_speakers": false,
+    "confidence": "high/medium/low"
+  },
+  "reliability": {
+    "transcript_confidence": "high/medium/low/unknown",
+    "nonverbal_confidence": "high/medium/low/unknown",
+    "emotion_confidence": "high/medium/low/unknown",
+    "overall_confidence": "high/medium/low/unknown"
+  }
+}
+

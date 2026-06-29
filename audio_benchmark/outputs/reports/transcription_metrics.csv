@@ -1,0 +1,5 @@
+provider,model,total_files,coverage_rate,empty_transcript_rate,avg_peer_transcript_similarity,wer,cer,ground_truth_items
+elevenlabs,scribe_v2,10,1.0,0.0,0.4494479367840858,,,0
+gemini,gemini-3.1-pro-preview,10,0.9,0.1,0.5569796577940773,,,0
+gemini,gemini-3.5-flash,10,0.9,0.1,0.5532001345075847,,,0
+openai,gpt-4o-mini-transcribe,10,0.0,1.0,0.06666666666666667,,,0

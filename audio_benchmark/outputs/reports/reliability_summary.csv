@@ -1,0 +1,5 @@
+provider,model,reliability_score,coverage_score,transcript_quality_score,nonverbal_tag_score,emotion_agreement_score,error_penalty,unsupported_field_penalty
+elevenlabs,scribe_v2,65.0,25.0,25.0,15.0,5.0,0.0,5.0
+gemini,gemini-3.1-pro-preview,53.5,22.5,22.5,7.5,4.0,3.0,0.0
+gemini,gemini-3.5-flash,50.5,22.5,22.5,4.5,4.0,3.0,0.0
+openai,gpt-4o-mini-transcribe,-35.0,0.0,0.0,0.0,5.0,30.0,10.0

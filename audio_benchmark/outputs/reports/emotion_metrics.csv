@@ -1,0 +1,5 @@
+provider,model,avg_peer_emotion_agreement,uncertain_emotion_rate,not_applicable_rate,emotion_label_counts
+elevenlabs,scribe_v2,0.3333333333333333,0.0,0.0,"{"""": 10}"
+gemini,gemini-3.1-pro-preview,0.26666666666666666,0.0,0.1,"{""calm"": 2, ""neutral"": 2, ""not_applicable"": 1, ""happy"": 4, ""excited"": 1}"
+gemini,gemini-3.5-flash,0.26666666666666666,0.0,0.1,"{""calm"": 3, ""excited"": 2, ""not_applicable"": 1, ""happy"": 4}"
+openai,gpt-4o-mini-transcribe,0.3333333333333333,0.0,0.0,"{"""": 10}"
