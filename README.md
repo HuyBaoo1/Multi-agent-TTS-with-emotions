@@ -12,71 +12,13 @@ The benchmark extracts:
 
 It does not split audio into windows and does not implement sliding-window localization. Each selected provider/model is called at most once per audio file unless you intentionally bypass cache with `--force_refresh true`.
 
-## Setup
-
-```bash
-pip install -r requirements.txt
-copy .env.example .env
-```
-
-Fill `.env` with the keys for providers you want to run:
-
-```text
-GEMINI_API_KEY=
-OPENAI_API_KEY=
-ELEVENLABS_API_KEY=
-```
-
-The CLI prints only whether each key exists, never the key value.
-
-## Dry Run
-
-```bash
-python run_audio_benchmark.py --audio_dir audio/Audio-short --output_dir audio_benchmark/outputs --dry_run
-```
-
-## Sample Run
-
-```bash
-python run_audio_benchmark.py --audio_dir audio/Audio-short --output_dir audio_benchmark/outputs --limit 3
-```
-
 ## Full Run
 
 ```bash
 python run_audio_benchmark.py --audio_dir audio/Audio-short --output_dir audio_benchmark/outputs
 ```
 
-## Useful Options
-
-```bash
---providers gemini,openai,elevenlabs
---models gemini-3.5-flash,gemini-3.1-pro-preview,gpt-4o-mini-transcribe,scribe_v2
---limit 10
---dry_run
---force_refresh false
---ground_truth path/to/ground_truth.csv
-```
-
 Ground truth can be JSON or CSV. Use one of `file_id`, `file_path`, or `file_name` plus a `transcript` field.
-
-## Outputs
-
-```text
-audio_benchmark/outputs/
-  raw/
-    <provider>_<model>_<file_id>.json
-  normalized/
-    audio_context_results.jsonl
-  reports/
-    model_comparison.csv
-    transcription_metrics.csv
-    nonverbal_metrics.csv
-    emotion_metrics.csv
-    reliability_summary.csv
-    error_report.csv
-    benchmark_report.md
-```
 
 ## Provider Notes
 
